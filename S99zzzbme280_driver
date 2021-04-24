@@ -1,0 +1,26 @@
+#!/bin/sh
+echo "! ------------------------------------bonjour-------------------------------------------------- !"
+cd ~
+# pour les bus i2c 
+modprobe i2c-dev
+modprobe i2c-bcm2835
+
+# pour le gpio 24 : reste rouge et se met a clignoter s'il y'a erreur
+cd /sys/class/gpio
+echo 24 > export
+cd gpio24/
+echo out > direction
+echo 1 > value
+echo 0 > value
+
+# pour le gpio 17 : LED Bleu qui clignote, signe que la temperature est lue
+cd /sys/class/gpio
+echo 17 > export
+cd gpio17/
+echo out > direction
+echo 1 > value
+echo 0 > value
+
+# pour lancer le driver
+cd /home/user
+./BME_driver /dev/i2c-1
