@@ -92,12 +92,4 @@ $ ./output/host/usr/bin/arm-linux-gcc ../embeddebSys_RPI3/src/BME280_driver.c ..
 - pour vérifier les mésures faites, vous pouvez établir une connection série avec la RPI et ouvrir un terminal avec gtkterm par example.
 - Les données s'afficheront alors dans le terminal.
 
-Des liens vidéos pour des tests que nous avons fait.
-
-
-
-
-
-
-
-
+Le lien vidéo de presentation du résultat final : https://youtu.be/u70xgFuJd9I
